@@ -49,6 +49,7 @@ public class TestRunner extends BaseTest{
             Assert.assertTrue(found, "Employee '" + name + "' not found in the list");
             System.out.println("Employee '" + name + "' was successfully found in the list");
         }
+	dashboardPage.logout();
     }
 
 }
