@@ -9,11 +9,11 @@ import pages.EmployeeListPage;
 import pages.LoginPage;
 import utils.BaseTest;
 
-public class LoginTest extends BaseTest{
+public class TestRunner extends BaseTest{
 	
 	@Test
-	public void testLogin() throws InterruptedException {
-		LoginPage loginPage = new LoginPage(driver);
+	public void test() throws InterruptedException {
+	LoginPage loginPage = new LoginPage(driver);
         loginPage.login("Admin", "admin123");
         Thread.sleep(3000);
 
