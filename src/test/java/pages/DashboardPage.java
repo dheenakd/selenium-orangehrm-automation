@@ -12,6 +12,8 @@ public class DashboardPage {
     WebDriverWait wait;
 
     By pimMenu = By.xpath("//span[text()='PIM']");
+    By userDropdown = By.xpath("//*[@id='app']/div[1]/div[1]/header/div[1]/div[3]/ul/li/span/p");
+    By logoutBtn = By.xpath("//a[text()='Logout']");
 
     public DashboardPage(WebDriver driver) {
         this.driver = driver;
@@ -20,5 +22,9 @@ public class DashboardPage {
 
     public void goToPIMModule() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(pimMenu)).click();
+    }
+    public void logout() {
+        wait.until(ExpectedConditions.elementToBeClickable(userDropdown)).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(logoutBtn)).click();
     }
 }
